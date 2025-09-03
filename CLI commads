@@ -1,0 +1,95 @@
+Set line console and vty password in switch command
+Hostname floor1-sw    #this is the name of switch 
+Line console 0
+Password cisco      #paassword is cisco
+Login 
+Exit
+Line vty 0 15
+Password cicso      # paassword is cisco
+Login 
+Exit
+No ip domain-lookup   #wrong command will not impact cli that why we sued it
+Enable password cisco   #protech admin mode if we not used it anyone can be the admin
+Service password encryption   #hide the password
+Do wr
+_______________________________________________________________________________________
+Add security to layer 2 switch
+Switch port-security
+ Switch port-security maximum 2
+Switch port-security mac address sticky
+Switch port-security violation shutdown
+Do wr
+Connect ssh in router command for remote login-
+hostname f3-router                                  #give router a name 
+ip domain-name gtech                              # add domain name where gtech is name 
+username gtech passward getech           #add username and password
+crypto key generate rsa                              # it generate crypto key where you have to write 1024 and it show 
+                                                                            shh is enable            
+line vty 0 15
+login local
+transport input ssh 
+do wr              
+#now if you want to connet router from any pc you used command 
+Ssh -l gtech 10.10.10.1                             #gtech si username name and 10.10.10.1 is router ip        
+Password:
+F2-rpoouter>                                             #this will show means connect
+Exit
+_______________________________________________________________________________________                                                                                                                                         
+Ospf setup in router-
+Router ospf 10 
+Network 10.10.10.0 255.0.0.0  area 0   #add all network same like this way which is connected to router
+Network 10.10.10.1 255.0.0.0  area 0   
+_______________________________________________________________________________________
+
+
+Rip v2 routing protocol-
+Router rip
+Version 2
+Network 10.10.10.0   #all connected network in router
+_______________________________________________________________________________________
+Add banner in switch
+Banner motd  #this is floor 1 switch#              #this sis message who ever try to enter in tgis switch
+_______________________________________________________________________________________
+Set line console and vty password in switch command
+Hostname floor1-sw    #this is the name of switch 
+Line console 0
+Password cisco      #paassword is cisco
+Login 
+Exit
+Line vty 0 15
+Password cicso      # paassword is cisco
+Login 
+Exit
+No ip domain-lookup   #wrong command will not impact cli that why we sued it
+Enable password cisco   #protech admin mode if we not used it anyone can be the admin
+Service password encryption   #hide the password
+Do wr
+_______________________________________________________________________________________
+Add security to layer 2 switch
+Switch port-security
+ Switch port-security maximum 2
+Switch port-security mac address sticky
+Switch port-security violation shutdown
+Do wr
+
+
+OSPF configuration in layer 3 switch 
+ip routing 
+router ospd 10
+network 10.10.10.0 0.0.0.255 area 0
+Add inter-vlan routing in layer 3 switch plus ip dhcp helper address
+Vlan 10
+Valn 20
+Vlan 30                                                   #first write how many vlan in layer 3 switch
+Valn 40
+Vlan 50                                                    #enter
+
+Int vlan  10                                        #go the  vlan 10
+No shutdown
+Ip address 192.168.2.1    255.255.255.0           #add gateway of the vlan 10
+Ip helper-address    168.129.11.3                       #this is the srever ip 
+Exit
+Do wr                                                                       #in last after all configure save 
+#now same step for each vlan 20,30 and etc
+_______________________________________________________________________________________
+
