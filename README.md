@@ -62,8 +62,11 @@ The final implementation connects *all departments across 4 floors* with:
 <img width="1498" height="710" alt="Screenshot 2025-09-03 133010" src="https://github.com/user-attachments/assets/80613991-a7e3-4329-8659-57a9f2d8a211" />
 ## ✅ Verification & Testing
 - Devices in the *same VLAN communicate* successfully.
+<img width="775" height="442" alt="Screenshot 2025-09-03 141950" src="https://github.com/user-attachments/assets/8d42011a-7a25-40b6-9c04-95cb16f51422" />
+
 - Devices in *different VLANs communicate* via routing.
 - Automatic IP allocation verified.
+<img width="879" height="675" alt="Screenshot 2025-09-03 142053" src="https://github.com/user-attachments/assets/57410ba3-41d1-492d-8779-0ed57db47004" />
 - Remote access via SSH tested.
 - Redundancy tested by shutting down links.
 
